@@ -25,7 +25,7 @@ with st.sidebar:
     st.info("Configure the Transformer")
 
     model_option = st.selectbox(
-        "Select Clustering Model:",
+        "Select Language Models:",
         ("BERT Base", "DistilRoBERTa"),
     )
 
