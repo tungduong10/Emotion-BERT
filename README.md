@@ -1,6 +1,27 @@
-# ⚠️ Important Note for Evaluators (Giảng viên lưu ý)
+# 🎭 MELD Emotion Intelligence: Automatic Emotion Recognition
 
-Due to GitHub's strict file size limit (100MB) and Git LFS bandwidth restrictions, the pre-trained Transformer models (`.safetensors`, `.bin`) and heavy dataset features are not included in this repository. **They are securely hosted on Google Drive.**
+## 🎯 Project Objective
+The primary goal of this project is to build a robust Natural Language Processing (NLP) system capable of automatically detecting and classifying human emotions from conversational text. 
+
+Understanding emotions in dialogues is a crucial step toward enhancing Human-Computer Interaction (HCI), building empathetic chatbots, and analyzing customer sentiment. This project explores the trade-offs between model accuracy and computational efficiency by comparing a heavy-weight architecture with a lightweight, distilled model.
+
+## 📊 The Dataset: MELD
+We utilized the **MELD (Multimodal EmotionLines Dataset)** for training and evaluation. 
+* **Source:** MELD is an extension of the original EmotionLines dataset, featuring multi-party conversations extracted from the popular TV sitcom *Friends*.
+* **Official Link:** https://www.kaggle.com/datasets/zaber666/meld-dataset
+* **Classes:** The utterances are categorized into 7 distinct emotion labels: `Anger`, `Disgust`, `Fear`, `Joy`, `Neutral`, `Sadness`, and `Surprise`.
+
+## 🧠 Methodology & Models
+To tackle this classification task, we fine-tuned and evaluated two distinct Transformer-based architectures on the MELD dataset:
+
+1. **BERT Base (Baseline):** A powerful, heavy-weight model (12 layers) used as our primary baseline to establish the upper bound of accuracy and confidence scores.
+2. **DistilRoBERTa:** A lighter, faster, distilled version of RoBERTa (6 layers). We fine-tuned this to analyze the speed-accuracy trade-off, making it ideal for real-time edge deployment.
+
+By directly comparing these two models, we aim to provide practical insights into which architecture is best suited for different real-world production environments.
+
+## ⚠️ Important Note for Evaluators (Giảng viên lưu ý)
+
+Due to GitHub's strict file size limit (100MB) and Git LFS bandwidth restrictions, the pre-trained Transformer models (`.safetensors`, `.bin`) and heavy dataset features are not included in this repository. **The models are securely hosted on Google Drive.**
 
 To run the Streamlit app successfully on your local machine, please follow these exact steps:
 
